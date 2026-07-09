@@ -1,0 +1,94 @@
+<main class="demo-shell">
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="ngx-liquid-glass home">
+      <span class="brand-mark" aria-hidden="true"><i></i></span>
+      <span>ngx-liquid-glass</span>
+    </a>
+    <p>Angular liquid glass directive</p>
+  </header>
+
+  <section class="liquid-scene" #lensScene id="top" aria-label="Liquid glass component playground">
+    <div class="scene-orb orb-one" aria-hidden="true"></div>
+    <div class="scene-orb orb-two" aria-hidden="true"></div>
+    <div class="scene-grid" aria-hidden="true"></div>
+
+    <div class="intro">
+      <span class="eyebrow">Directive playground</span>
+      <h1>Liquid glass<br /><em>for Angular.</em></h1>
+      <p>Refraction, depth, and responsive edges from a single directive.</p>
+    </div>
+
+    <section class="profile-card" aria-label="Example profile card">
+      <div class="card-heading">
+        <span class="avatar">NG</span>
+        <span><strong>ngx-liquid-glass</strong><small>Angular component</small></span>
+        <span class="status" aria-label="Online"></span>
+      </div>
+      <div class="card-rule"></div>
+      <dl>
+        <div><dt>Framework</dt><dd>Angular 19+</dd></div>
+        <div><dt>Effect</dt><dd>DOM refraction</dd></div>
+        <div><dt>License</dt><dd>MIT</dd></div>
+      </dl>
+    </section>
+
+    <div class="action-row" aria-label="Example action buttons">
+      <button type="button" class="glass-button primary">Get started <span aria-hidden="true">↗</span></button>
+      <button type="button" class="glass-button">View source</button>
+    </div>
+
+    <div
+      class="glass-lens"
+      ngxLiquidGlass
+      [lgIntensity]="intensity()"
+      [lgRadius]="999"
+      [lgTint]="tint()"
+      [lgRefraction]="refraction()"
+      [lgBackdrop]="lensScene"
+      [lgEdgeEffect]="edgeEffect()"
+      [lgRefractionMode]="refractionMode()"
+      [style.--lens-size.px]="radius()"
+      [style.left.%]="lensPosition()?.x"
+      [style.top.%]="lensPosition()?.y"
+      [class.is-dragging]="isDragging()"
+      [attr.aria-grabbed]="isDragging()"
+      (pointerdown)="startLensDrag($event)"
+      aria-label="Drag to refract the playground"
+    >
+      <span class="lens-label">drag</span>
+      <span class="lens-plus" aria-hidden="true"></span>
+    </div>
+
+    <aside class="controls" aria-label="Liquid glass controls">
+      <div class="controls-title"><span>Customize</span><span class="live-dot">Live</span></div>
+      <div class="control-group">
+        <label for="intensity">Lens profile</label>
+        <select id="intensity" [value]="intensity()" (change)="setIntensity($event)">
+          @for (option of intensityOptions; track option) {
+            <option [value]="option" [selected]="intensity() === option">{{ option }}</option>
+          }
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="radius">Lens size <span>{{ radius() }}px</span></label>
+        <input id="radius" type="range" min="150" max="310" step="1" [value]="radius()" (input)="setRadius($event)" />
+      </div>
+      <div class="control-group split-controls">
+        <span><label for="edge-effect">Lens edge</label><select id="edge-effect" [value]="edgeEffect()" (change)="setEdgeEffect($event)">@for (option of edgeEffectOptions; track option) { <option [value]="option">{{ option }}</option> }</select></span>
+        <span><label for="refraction-mode">Mode</label><select id="refraction-mode" [value]="refractionMode()" (change)="setRefractionMode($event)">@for (option of refractionModeOptions; track option) { <option [value]="option">{{ option }}</option> }</select></span>
+      </div>
+      <div class="control-row">
+        <span>Surface tint</span>
+        <div class="swatches">
+          @for (option of tintOptions; track option) {
+            <button type="button" class="swatch" [class.active]="tint() === option" [style.background]="option" [attr.aria-label]="'Use tint ' + option" (click)="setTint(option)"></button>
+          }
+        </div>
+      </div>
+      <div class="control-row switch-row">
+        <span><b>Refraction</b><small>Distort the backdrop</small></span>
+        <button type="button" class="toggle" [class.active]="refraction()" (click)="toggleRefraction()" [attr.aria-label]="refraction() ? 'Disable refraction' : 'Enable refraction'"><i></i></button>
+      </div>
+    </aside>
+  </section>
+</main>
