@@ -24,6 +24,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm run ng -- build ngx-liquid-glass
       - run: npm run ng -- build demo --base-href "/ngx-liquid-glass/"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
