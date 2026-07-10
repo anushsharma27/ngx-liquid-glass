@@ -15,13 +15,13 @@
     "angular 19"
   ],
   "license": "MIT",
-  "homepage": "https://sharma-anush-tft.github.io/ngx-liquid-glass/",
+  "homepage": "https://anushsharma27.github.io/ngx-liquid-glass/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sharma-anush-tft/ngx-liquid-glass.git"
+    "url": "git+https://github.com/anushsharma27/ngx-liquid-glass.git"
   },
   "bugs": {
-    "url": "https://github.com/sharma-anush-tft/ngx-liquid-glass/issues"
+    "url": "https://github.com/anushsharma27/ngx-liquid-glass/issues"
   },
   "schematics": "./schematics/collection.json",
   "peerDependencies": {

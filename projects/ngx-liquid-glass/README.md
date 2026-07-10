@@ -4,7 +4,7 @@ Angular standalone directive for Apple-style liquid glass surfaces. Drop it onto
 
 ## Demo
 
-Try the interactive playground: **[ngx-liquid-glass live demo](https://sharma-anush-tft.github.io/ngx-liquid-glass/)**.
+Try the interactive playground: **[ngx-liquid-glass live demo](https://anushsharma27.github.io/ngx-liquid-glass/)**.
 
 <p align="center">
   <img src="./assets/demo-desktop.png" alt="ngx-liquid-glass interactive desktop playground" width="900" />

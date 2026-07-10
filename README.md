@@ -2,7 +2,7 @@
 
 Angular 19 workspace for the `ngx-liquid-glass` publishable library and its demo app.
 
-**[Open the live demo](https://sharma-anush-tft.github.io/ngx-liquid-glass/)**
+**[Open the live demo](https://anushsharma27.github.io/ngx-liquid-glass/)**
 
 ## Projects
 
