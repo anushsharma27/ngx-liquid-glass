@@ -7,11 +7,11 @@ Angular standalone directive for Apple-style liquid glass surfaces. Drop it onto
 Try the interactive playground: **[ngx-liquid-glass live demo](https://anushsharma27.github.io/ngx-liquid-glass/)**.
 
 <p align="center">
-  <img src="./assets/demo-desktop.png" alt="ngx-liquid-glass interactive desktop playground" width="900" />
+  <img src="https://raw.githubusercontent.com/anushsharma27/ngx-liquid-glass/main/projects/ngx-liquid-glass/assets/demo-desktop.png" alt="ngx-liquid-glass interactive desktop playground" width="900" />
 </p>
 
 <p align="center">
-  <img src="./assets/demo-mobile.png" alt="ngx-liquid-glass responsive mobile playground" width="360" />
+  <img src="https://raw.githubusercontent.com/anushsharma27/ngx-liquid-glass/main/projects/ngx-liquid-glass/assets/demo-mobile.png" alt="ngx-liquid-glass responsive mobile playground" width="360" />
 </p>
 
 The playground exposes the directive's intensity, edge treatment, refraction mode, tint, and lens size controls. Drag the lens across the scene to see DOM-backed refraction in action.
@@ -19,7 +19,7 @@ The playground exposes the directive's intensity, edge treatment, refraction mod
 ### Prismatic fluid refraction
 
 <p align="center">
-  <img src="./assets/demo-prismatic-fluid.png" alt="ngx-liquid-glass with vision intensity, prismatic edge, and fluid refraction" width="900" />
+  <img src="https://raw.githubusercontent.com/anushsharma27/ngx-liquid-glass/main/projects/ngx-liquid-glass/assets/demo-prismatic-fluid.png" alt="ngx-liquid-glass with vision intensity, prismatic edge, and fluid refraction" width="900" />
 </p>
 
 ## Install
