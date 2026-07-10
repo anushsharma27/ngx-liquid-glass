@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://anushsharma27.github.io/ngx-liquid-glass/sitemap.xml
+Sitemap: https://anushsharma27.github.io/ngx-liquid-glass/sitemap.txt
+Sitemap: https://anushsharma27.github.io/ngx-liquid-glass/sitemap-index.xml
