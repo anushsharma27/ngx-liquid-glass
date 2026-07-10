@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sharma-anush-tft.github.io/ngx-liquid-glass/sitemap.xml

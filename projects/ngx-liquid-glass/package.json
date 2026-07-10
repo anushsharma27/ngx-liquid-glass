@@ -1,7 +1,28 @@
 {
   "name": "ngx-liquid-glass",
   "version": "0.0.1",
+  "description": "Angular directive for Apple-inspired liquid glass effects with DOM-backed refraction, backdrop blur, and configurable edges.",
+  "keywords": [
+    "angular",
+    "angular liquid glass",
+    "liquid glass",
+    "glassmorphism",
+    "apple liquid glass",
+    "angular directive",
+    "backdrop filter",
+    "svg refraction",
+    "ui effects",
+    "angular 19"
+  ],
   "license": "MIT",
+  "homepage": "https://sharma-anush-tft.github.io/ngx-liquid-glass/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharma-anush-tft/ngx-liquid-glass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sharma-anush-tft/ngx-liquid-glass/issues"
+  },
   "schematics": "./schematics/collection.json",
   "peerDependencies": {
     "@angular/common": "^19.0.0",
