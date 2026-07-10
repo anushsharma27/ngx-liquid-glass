@@ -1,6 +1,6 @@
 {
   "name": "ngx-liquid-glass",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Angular directive for Apple-inspired liquid glass effects with DOM-backed refraction, backdrop blur, and configurable edges.",
   "keywords": [
     "angular",
