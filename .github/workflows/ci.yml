@@ -29,10 +29,12 @@ jobs:
       - run: npm run build:demo
       - run: npm run check:package
       - run: npm audit --omit=dev
+      - name: Pack npm artifact
+        run: npm pack ./dist/ngx-liquid-glass --pack-destination dist
       - uses: actions/upload-artifact@v4
         with:
           name: ngx-liquid-glass-package
-          path: dist/ngx-liquid-glass
+          path: dist/ngx-liquid-glass-*.tgz
           if-no-files-found: error
           retention-days: 7
 
@@ -66,11 +68,11 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: ngx-liquid-glass-package
-          path: dist/ngx-liquid-glass
+          path: dist
       - name: Install Angular ${{ matrix.angular }} consumer dependencies
         working-directory: integration/consumer
         run: >-
-          npm install --no-package-lock
+          npm install --no-package-lock --no-save
           @angular/common@${{ matrix.angular }}
           @angular/compiler@${{ matrix.angular }}
           @angular/core@${{ matrix.angular }}
@@ -80,6 +82,7 @@ jobs:
           @angular/compiler-cli@${{ matrix.angular }}
           typescript@${{ matrix.typescript }}
           zone.js@${{ matrix.zone }}
+          ../../dist/ngx-liquid-glass-*.tgz
       - name: Build Angular ${{ matrix.angular }} consumer
         working-directory: integration/consumer
         run: npm run build

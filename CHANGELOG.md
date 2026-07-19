@@ -4,6 +4,10 @@ All notable changes to `ngx-liquid-glass` are documented here. The project follo
 
 ## [Unreleased]
 
+### Fixed
+
+- Consumer compatibility CI now installs the packed npm tarball, matching real-world installation and dependency resolution.
+
 ## [0.0.6] - 2026-07-19
 
 ### Added

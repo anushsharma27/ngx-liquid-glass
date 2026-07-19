@@ -9,7 +9,6 @@
     "@angular/compiler": "20",
     "@angular/core": "20",
     "@angular/platform-browser": "20",
-    "ngx-liquid-glass": "file:../../dist/ngx-liquid-glass",
     "rxjs": "^7.8.2",
     "tslib": "^2.8.1",
     "zone.js": "~0.15.1"
