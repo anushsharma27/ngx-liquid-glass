@@ -1,0 +1,35 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "09:00"
+      timezone: Asia/Kolkata
+    open-pull-requests-limit: 5
+    groups:
+      angular:
+        patterns:
+          - "@angular/*"
+          - "@angular-devkit/*"
+          - "ng-packagr"
+          - "typescript"
+      test-tooling:
+        patterns:
+          - "jasmine*"
+          - "karma*"
+    labels:
+      - dependencies
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+    labels:
+      - dependencies
+      - github-actions

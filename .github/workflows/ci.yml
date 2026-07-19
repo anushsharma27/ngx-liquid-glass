@@ -1,0 +1,85 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Build, test, and validate package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.2
+          cache: npm
+      - run: npm ci
+      - run: npm run build:library
+      - run: npm run test:library
+      - run: npm run build:demo
+      - run: npm run check:package
+      - run: npm audit --omit=dev
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ngx-liquid-glass-package
+          path: dist/ngx-liquid-glass
+          if-no-files-found: error
+          retention-days: 7
+
+  consumer:
+    name: Angular ${{ matrix.angular }} consumer
+    needs: verify
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - angular: 20
+            node: 20.19.2
+            typescript: ~5.9.3
+            zone: ~0.15.1
+          - angular: 21
+            node: 22
+            typescript: ~5.9.3
+            zone: ~0.15.1
+          - angular: 22
+            node: 22
+            typescript: ~6.0.2
+            zone: ~0.16.0
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - uses: actions/download-artifact@v4
+        with:
+          name: ngx-liquid-glass-package
+          path: dist/ngx-liquid-glass
+      - name: Install Angular ${{ matrix.angular }} consumer dependencies
+        working-directory: integration/consumer
+        run: >-
+          npm install --no-package-lock
+          @angular/common@${{ matrix.angular }}
+          @angular/compiler@${{ matrix.angular }}
+          @angular/core@${{ matrix.angular }}
+          @angular/platform-browser@${{ matrix.angular }}
+          @angular-devkit/build-angular@${{ matrix.angular }}
+          @angular/cli@${{ matrix.angular }}
+          @angular/compiler-cli@${{ matrix.angular }}
+          typescript@${{ matrix.typescript }}
+          zone.js@${{ matrix.zone }}
+      - name: Build Angular ${{ matrix.angular }} consumer
+        working-directory: integration/consumer
+        run: npm run build

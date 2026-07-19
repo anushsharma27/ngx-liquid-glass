@@ -1,6 +1,6 @@
 {
   "name": "ngx-liquid-glass",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Angular directive for Apple-inspired liquid glass effects with DOM-backed refraction, backdrop blur, and configurable edges.",
   "keywords": [
     "angular",
@@ -12,8 +12,9 @@
     "backdrop filter",
     "svg refraction",
     "ui effects",
-    "angular 19",
-    "angular 20"
+    "angular 20",
+    "angular 21",
+    "angular 22"
   ],
   "license": "MIT",
   "homepage": "https://anushsharma27.github.io/ngx-liquid-glass/",
@@ -26,8 +27,8 @@
   },
   "schematics": "./schematics/collection.json",
   "peerDependencies": {
-    "@angular/common": "^19.0.0 || ^20.0.0",
-    "@angular/core": "^19.0.0 || ^20.0.0"
+    "@angular/common": "^20.0.0 || ^21.0.0 || ^22.0.0",
+    "@angular/core": "^20.0.0 || ^21.0.0 || ^22.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

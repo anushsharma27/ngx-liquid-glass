@@ -8,6 +8,10 @@
 
 # Node
 /node_modules
+/integration/consumer/node_modules
+/integration/consumer/dist
+/integration/consumer/out-tsc
+/integration/consumer/.angular
 npm-debug.log
 yarn-error.log
 

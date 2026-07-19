@@ -1,0 +1,33 @@
+name: Feature request
+description: Propose a focused improvement to ngx-liquid-glass
+title: "[Feature]: "
+labels: [enhancement, triage]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: Describe the user need rather than only the proposed API.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Explain the desired behavior and include an API example when relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe current workarounds or alternative designs.
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Project constraints
+      options:
+        - label: This can preserve SSR safety and graceful browser fallbacks.
+          required: true
+        - label: I searched existing issues and found no duplicate request.
+          required: true

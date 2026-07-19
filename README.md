@@ -1,6 +1,6 @@
 # ngx-liquid-glass workspace
 
-Angular 19 workspace for the `ngx-liquid-glass` publishable library and its demo app.
+Angular 20 workspace for the `ngx-liquid-glass` publishable library and its demo app. The published partial-Ivy package supports Angular 20 through 22.
 
 **[Open the live demo](https://anushsharma27.github.io/ngx-liquid-glass/)**
 
