@@ -2,9 +2,7 @@
 
 Angular standalone directive for Apple-style liquid glass surfaces. Drop it onto existing markup; no wrapper component, no root providers, and no required configuration.
 
-[![npm version](https://img.shields.io/npm/v/ngx-liquid-glass.svg)](https://www.npmjs.com/package/ngx-liquid-glass)
 [![CI](https://github.com/anushsharma27/ngx-liquid-glass/actions/workflows/ci.yml/badge.svg)](https://github.com/anushsharma27/ngx-liquid-glass/actions/workflows/ci.yml)
-[![license](https://img.shields.io/npm/l/ngx-liquid-glass.svg)](https://github.com/anushsharma27/ngx-liquid-glass/blob/main/LICENSE)
 
 ## At a glance
 

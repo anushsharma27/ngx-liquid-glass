@@ -4,9 +4,12 @@ All notable changes to `ngx-liquid-glass` are documented here. The project follo
 
 ## [Unreleased]
 
+## [0.0.7] - 2026-07-19
+
 ### Fixed
 
 - Consumer compatibility CI now installs the packed npm tarball, matching real-world installation and dependency resolution.
+- Removed unreliable external version and license badge images that rendered as broken images on npm.
 
 ## [0.0.6] - 2026-07-19
 
@@ -57,7 +60,8 @@ All notable changes to `ngx-liquid-glass` are documented here. The project follo
 - SSR-safe browser integration and graceful browser fallbacks.
 - `ng add` installation schematic and interactive demo.
 
-[Unreleased]: https://github.com/anushsharma27/ngx-liquid-glass/compare/v0.0.6...HEAD
+[Unreleased]: https://github.com/anushsharma27/ngx-liquid-glass/compare/v0.0.7...HEAD
+[0.0.7]: https://github.com/anushsharma27/ngx-liquid-glass/releases/tag/v0.0.7
 [0.0.6]: https://github.com/anushsharma27/ngx-liquid-glass/releases/tag/v0.0.6
 [0.0.5]: https://github.com/anushsharma27/ngx-liquid-glass/releases/tag/v0.0.5
 [0.0.4]: https://github.com/anushsharma27/ngx-liquid-glass/releases/tag/v0.0.4
